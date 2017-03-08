@@ -46,7 +46,7 @@ The entire universe has 0 bugs.
 ```
 ### Change long to unsigned long and try to find the number that makes that one too big.
 #### Change long to unsigned long
-```c
+```
 unsigned long universe_of_defects = 1UL * 1024UL * 1024UL * 1024UL;
 printf("The entire universe has %lu bugs.\n", universe_of_defects);
 ```
@@ -61,6 +61,7 @@ The output:
 $ ./ex7
 The entire universe has 0 bugs.
 ```
+当`universe_of_defects = 8L*1024L*1024L*1024L*1024L*1024L*1024L`时，打印的值不是0，而是-9223372036854775808.
 ### Go search online to find out what unsigned does.
 `unsigned` means the integer is not negative.
 ### Try to explain to yourself (before I do in the next exercise) why you can multiply a char and an int.
